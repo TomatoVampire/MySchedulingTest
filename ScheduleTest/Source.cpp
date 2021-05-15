@@ -1,17 +1,13 @@
 #include<iostream>
-#include<stdlib.h>
-#include<time.h>
 #include<string>
-#include<queue>
 #include"FCFS.h"
 #include"SJF.h"
+#include"TimeSlice.h"
+#include"MyQueue.h"
+#include"HRF.h"
+#include"MRLA.h"
 
 using namespace std;
-//系统函数：sleep,keygo
-
-
-//用户函数
-//set
 int time_unit = 2;
 const int maxnum = 10;
 int num = 5;
@@ -30,99 +26,42 @@ PCB pcb2[4] = {
 	{1003,"P4",16,	6,	6,	0,	'R'}
 };
 
+PCB pcb3[4] = {
+	{1000,"A",0,	7,	7,	0,	'R'},
+	{1001,"B",5,	4,	4,	0,	'R'},
+	{1002,"C",7,	13,	13,	0,	'R'},
+	{1003,"D",12,	9,	9,	0,	'R'}
+};
+
 
 //调度函数
-/*
-void FCFS() {
-	//以到达顺序进行排序
-	int i, j, temp;
-	double k;
-	for (int i = 0; i < 5; i++) {
-		order[i] = ready[i] = pcbdata[i].time_start;
-	}
 
-	for (i = 0; i < num; i++) {
-		for (j = i; j < num; j++) {
-			if (order[i] > order[j]) {
-				temp = order[i];
-				order[i] = order[j];
-				order[j] = temp;
-				temp = ready[i];
-				ready[i] = ready[j];
-				ready[j] = temp;
-			}
 
-		}
-	}
-
-	printf("--FCFS--\n");
-	temp = pcbdata[ready[0]].time_start;
-	for (i = 0; i < num; i++) {
-		cout << "the " << i + 1 << " process--" << pcbdata[ready[i]].name << endl;
-		printf("arrival -- %d,service -- %d\n", pcbdata[ready[i]].time_start, pcbdata[ready[i]].time_need);
-		printf("processing.......");
-		_sleep(1);
-		printf("process done.\n");
-		temp += pcbdata[ready[i]].time_need;
-		j = temp - pcbdata[ready[i]].time_start;
-		k = (float)j / pcbdata[ready[i]].time_need;
-		printf("done -- %d, turnaround -- %d, weighted turnaround -- %.1f\n",
-			temp, j, k);
-	}
-	printf("--all process done--\n");
-
-}
-*/
-/*
-void SJF() {//短作业优先
-	int i, j, temp;
-	double k;
-	for (i = 0; i < 4; i++) {
-		order[i] = pcb2[i].time_need;
-		ready[i] = i;
-	}
-
-	bubble_sort(4, order);
-	bubble_sort(num, ready);
-
-	printf("--SJF--\n");
-	temp = pcb2[ready[0]].time_start;
-	for (i = 0; i < 4; i++) {
-		cout << "the " << i + 1 << " process--" << pcb2[ready[i]].name << endl;
-		printf("arrival -- %d,service -- %d\n", pcb2[ready[i]].time_start, pcb2[ready[i]].time_need);
-		printf("processing.......");
-		_sleep(1);
-		printf("process done.\n");
-		temp += pcb2[ready[i]].time_need;
-		j = temp - pcb2[ready[i]].time_start;
-		k = (float)j / pcb2[ready[i]].time_need;
-		printf("done -- %d, turnaround -- %d, weighted turnaround -- %.1f\n",
-			temp, j, k);
-	}
-	printf("--all process done--\n");
-}
-*/
-void HRF() {//高相应比算法
-
-}
-
-void Timeslice() {//按照先来先服务并且使用时间片轮转
-
-}
-
-void MRLA() {//多级反馈调度队列，抢占式调度
-
+void queueTest() {
+	MyQueue<int> m;
+	m.push(1);
+	m.push(2);
+	m.push(3);
+	cout << m.front() << endl;
+	m.pop();
+	cout << m.front() << endl;
+	cout << m[1] << endl;
+	m.clear();
+	cout << m.getsize() << endl;
+	m.push(4);
+	cout << m[0];
 }
 
 void main() {
-	int i = 0, sch = 99;
-	while (sch != 0) {
-		FCFS f(5,pcbdata); f.print();
-		//SJF s(4, pcb2); s.print();
+	cout << "code by TomatoVampire 2021.5" << endl;
 
-		//FCFS();
-		//SJF();
+	//queueTest();
+	//FCFS f(5,pcbdata); f.print();
+	//SJF s(4, pcb2); s.print();
+	//HRF h(4, pcb2); h.print();
+	MRLA m(4, 2, 4, 8, pcb3); m.print();
+	//TimeSlice t(5, time_unit, pcbdata); t.print();
 
-		getchar();
-	}
+	getchar();
+	
 }

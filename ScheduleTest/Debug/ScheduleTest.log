@@ -1,5 +1,4 @@
 ﻿  Source.cpp
-K:\c\ScheduleTest\ScheduleTest\Source.cpp(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
 K:\c\ScheduleTest\ScheduleTest\Scheduling.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
 K:\c\ScheduleTest\ScheduleTest\PCB.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
 K:\c\ScheduleTest\ScheduleTest\FCFS.h(9,10): warning C4101: 'k': unreferenced local variable
@@ -12,5 +11,11 @@ K:\c\ScheduleTest\ScheduleTest\SJF.h(10,10): warning C4101: 'j': unreferenced lo
 K:\c\ScheduleTest\ScheduleTest\SJF.h(10,7): warning C4101: 'i': unreferenced local variable
 K:\c\ScheduleTest\ScheduleTest\SJF.h(10,13): warning C4101: 'temp': unreferenced local variable
 K:\c\ScheduleTest\ScheduleTest\SJF.h(44,22): warning C4018: '<': signed/unsigned mismatch
-K:\c\ScheduleTest\ScheduleTest\Source.cpp(117,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+K:\c\ScheduleTest\ScheduleTest\TimeSlice.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+K:\c\ScheduleTest\ScheduleTest\TimeSlice.h(12,10): warning C4101: 'k': unreferenced local variable
+K:\c\ScheduleTest\ScheduleTest\HRF.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+K:\c\ScheduleTest\ScheduleTest\HRF.h(42,22): warning C4018: '<': signed/unsigned mismatch
+K:\c\ScheduleTest\ScheduleTest\MRLA.h(1,1): warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+K:\c\ScheduleTest\ScheduleTest\MRLA.h(20,10): warning C4101: 'k': unreferenced local variable
+K:\c\ScheduleTest\ScheduleTest\Source.cpp(55,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
   ScheduleTest.vcxproj -> K:\c\ScheduleTest\Debug\ScheduleTest.exe

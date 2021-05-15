@@ -35,5 +35,14 @@
     <ClInclude Include="TimeSlice.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="MyQueue.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HRF.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MRLA.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

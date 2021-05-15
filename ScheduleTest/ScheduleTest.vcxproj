@@ -143,6 +143,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FCFS.h" />
+    <ClInclude Include="HRF.h" />
+    <ClInclude Include="MRLA.h" />
+    <ClInclude Include="MyQueue.h" />
     <ClInclude Include="PCB.h" />
     <ClInclude Include="Scheduling.h" />
     <ClInclude Include="SJF.h" />
